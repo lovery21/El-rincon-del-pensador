@@ -1,0 +1,139 @@
+/* 1. Variables de Color */
+:root {
+  --bg-color: #f4f7f9;
+  --text-main: #333333;
+  --text-light: #555555;
+  --primary: #2563eb;
+  --primary-light: #dbeafe;
+  --card-bg: #ffffff;
+  --code-bg: #1e293b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Estilos Generales */
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  scroll-behavior: smooth; /* Hace que el menú baje suavemente */
+}
+
+/* 3. Navegación  */
+header {
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+/* 4. Estructura Principal */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+h1, h2, h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  border-bottom: 2px solid var(--primary-light);
+  padding-bottom: 0.5rem;
+}
+
+/* 5. El título grande */
+.hero {
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary), #1e40af);
+  color: white;
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.hero h1 {
+  color: white;
+  font-size: 2.5rem;
+}
+
+/* 6. Tarjetas para organizar el contenido */
+.card, article {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--primary);
+}
+
+/* Grids para que no se vea todo hacia abajo en pantallas grandes */
+.grid-articulos, .grid-conceptos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* 7. Bloque de Código */
+pre {
+  background-color: var(--code-bg);
+  color: #e2e8f0;
+  padding: 1.5rem;
+  border-radius: 10px;
+  overflow-x: auto; /* Para que el código no rompa la pantalla en móviles */
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* 8. Destacados y Footer */
+.highlight {
+  background-color: var(--primary-light);
+  border-left-color: #1e40af;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  margin-top: 4rem;
+  color: var(--text-light);
+}
